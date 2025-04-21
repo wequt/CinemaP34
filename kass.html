@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMA CITY - Кассир</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/kass.css">
+</head>
+
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">CINEMA CITY</a>
+            <div class="cashier-info">
+                <img src="img/cups.jpg" alt="Cashier" class="cashier-avatar">
+                <div>
+                    <div class="cashier-name">Николай Мамаев</div>
+                    <div class="cashier-role">Кассир</div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-cash-register"></i> Продажа билетов</a></li>
+            <li><a href="#"><i class="fas fa-exchange-alt"></i> Возврат билетов</a></li>
+            <li><a href="#"><i class="fas fa-list"></i> Бронирования</a></li>
+            <li><a href="#"><i class="fas fa-clock"></i> Сеансы сегодня</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Статистика</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                Выйти
+            </button>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="main-content">
+        <div class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Касса</h1>
+            </div>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Поиск фильма...">
+                </div>
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </button>
+                <img src="img/cups.jpg" alt="User" style="width:40px;border-radius:50%;">
+            </div>
+        </div>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Продажи сегодня</div>
+                    <div class="card-icon blue">
+                        <i class="fas fa-ruble-sign"></i>
+                    </div>
+                </div>
+                <div class="card-value">24,500₽</div>
+                <div class="card-change positive">
+                    <i class="fas fa-arrow-up"></i> 15% с вчера
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Билетов продано</div>
+                    <div class="card-icon green">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                </div>
+                <div class="card-value">58</div>
+                <div class="card-change positive">
+                    <i class="fas fa-arrow-up"></i> 8% с вчера
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Возвратов</div>
+                    <div class="card-icon orange">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                </div>
+                <div class="card-value">3</div>
+                <div class="card-change negative">
+                    <i class="fas fa-arrow-down"></i> 1 с вчера
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Занятость залов</div>
+                    <div class="card-icon red">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                </div>
+                <div class="card-value">72%</div>
+                <div class="card-change positive">
+                    <i class="fas fa-arrow-up"></i> 5% с вчера
+                </div>
+            </div>
+        </div>
+
+        <div class="ticket-sale">
+            <div class="section-header">
+                <h2 class="section-title">Продажа билетов</h2>
+            </div>
+
+            <div class="sale-form">
+                <div class="film-selection">
+                    <h3 class="section-title">Выберите фильм</h3>
+
+                    <div class="film-card selected">
+                        <img src="img/minecraft.png" alt="Film Poster" class="film-poster">
+                        <div class="film-info">
+                            <h3>Minecraft в кино</h3>
+                            <div class="film-meta">1 ч 44 мин ★ 6.2 | 12+</div>
+                        </div>
+                    </div>
+
+                    <div class="film-card">
+                        <img src="img/jdn.png" alt="Film Poster" class="film-poster">
+                        <div class="film-info">
+                            <h3>Ждун</h3>
+                            <div class="film-meta">1 ч 31 мин ★ 5.1 | 6+</div>
+                        </div>
+                    </div>
+
+                    <div class="film-card">
+                        <img src="img/dad.png" alt="Film Poster" class="film-poster">
+                        <div class="film-info">
+                            <h3>Батя 2. Дед</h3>
+                            <div class="film-meta">1 ч 29 мин ★ 7.6 | 12+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seat-selection">
+                    <h3 class="section-title">Выбор сеанса и мест</h3>
+
+                    <div class="form-group">
+                        <label>Дата сеанса</label>
+                        <select class="form-control">
+                            <option>Сегодня, 22 апреля</option>
+                            <option>Завтра, 23 апреля</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Время сеанса</label>
+                        <select class="form-control">
+                            <option>10:00 (350₽)</option>
+                            <option>13:30 (350₽)</option>
+                            <option>17:00 (400₽)</option>
+                            <option>21:30 (450₽)</option>
+                        </select>
+                    </div>
+
+                    <div class="screen">ЭКРАН</div>
+
+                    <div class="seats-grid">
+                        <div class="seat available">1</div>
+                        <div class="seat available">2</div>
+                        <div class="seat available">3</div>
+                        <div class="seat available">4</div>
+                        <div class="seat available">5</div>
+                        <div class="seat available">6</div>
+                        <div class="seat available">7</div>
+                        <div class="seat available">8</div>
+                        <div class="seat available">9</div>
+                        <div class="seat available">10</div>
+
+                        <div class="seat available">1</div>
+                        <div class="seat occupied">2</div>
+                        <div class="seat occupied">3</div>
+                        <div class="seat available">4</div>
+                        <div class="seat available">5</div>
+                        <div class="seat available">6</div>
+                        <div class="seat available">7</div>
+                        <div class="seat available">8</div>
+                        <div class="seat available">9</div>
+                        <div class="seat available">10</div>
+
+                        <div class="seat available">1</div>
+                        <div class="seat available">2</div>
+                        <div class="seat available">3</div>
+                        <div class="seat available">4</div>
+                        <div class="seat selected">5</div>
+                        <div class="seat selected">6</div>
+                        <div class="seat available">7</div>
+                        <div class="seat available">8</div>
+                        <div class="seat available">9</div>
+                        <div class="seat available">10</div>
+
+                        <div class="seat vip available">1</div>
+                        <div class="seat vip available">2</div>
+                        <div class="seat vip available">3</div>
+                        <div class="seat vip available">4</div>
+                        <div class="seat vip available">5</div>
+                        <div class="seat vip available">6</div>
+                        <div class="seat vip available">7</div>
+                        <div class="seat vip available">8</div>
+                        <div class="seat vip available">9</div>
+                        <div class="seat vip available">10</div>
+                    </div>
+
+                    <div class="seat-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #28a745;"></div>
+                            <span>Свободно</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #e50914;"></div>
+                            <span>Выбрано</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #6c757d;"></div>
+                            <span>Занято</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #ffc107;"></div>
+                            <span>VIP</span>
+                        </div>
+                    </div>
+
+                    <div class="ticket-summary">
+                        <div class="summary-row">
+                            <span>Билетов:</span>
+                            <span>2</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Места:</span>
+                            <span>Ряд 3, места 5-6</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Цена:</span>
+                            <span>700₽ (2 × 350₽)</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Итого:</span>
+                            <span>700₽</span>
+                        </div>
+
+                        <button class="btn btn-block">
+                            <i class="fas fa-ticket-alt"></i> Продать билеты
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-sales">
+            <div class="section-header">
+                <h2 class="section-title">Последние продажи</h2>
+                <a href="#" class="view-all">Все продажи</a>
+            </div>
+
+            <table class="sales-table">
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Фильм</th>
+                        <th>Места</th>
+                        <th>Сумма</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10:15</td>
+                        <td>Minecraft в кино</td>
+                        <td>Ряд 4, места 8-9</td>
+                        <td>700₽</td>
+                        <td>
+                            <button class="action-btn" title="Печать"><i class="fas fa-print"></i></button>
+                            <button class="action-btn" title="Возврат"><i class="fas fa-undo"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>09:45</td>
+                        <td>Ждун</td>
+                        <td>Ряд 2, место 5</td>
+                        <td>350₽</td>
+                        <td>
+                            <button class="action-btn" title="Печать"><i class="fas fa-print"></i></button>
+                            <button class="action-btn" title="Возврат"><i class="fas fa-undo"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>09:30</td>
+                        <td>Батя 2. Дед</td>
+                        <td>Ряд 1, места 1-4</td>
+                        <td>1,200₽</td>
+                        <td>
+                            <button class="action-btn" title="Печать"><i class="fas fa-print"></i></button>
+                            <button class="action-btn" title="Возврат"><i class="fas fa-undo"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainContent = document.querySelector('.main-content');
+
+        function toggleSidebar() {
+            const isActive = sidebar.classList.toggle('active');
+            overlay.classList.toggle('active', isActive);
+
+            document.body.style.overflow = isActive ? 'hidden' : '';
+
+            mainContent.style.pointerEvents = isActive ? 'none' : 'auto';
+        }
+
+        menuToggle.addEventListener('click', toggleSidebar);
+        mobileMenuToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleSidebar();
+        });
+
+        overlay.addEventListener('click', toggleSidebar);
+
+        const menuItems = document.querySelectorAll('.sidebar-menu li a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 844) {
+                    toggleSidebar();
+                }
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('seat') && e.target.classList.contains('available')) {
+                e.target.classList.toggle('selected');
+            }
+
+            if (e.target.closest('.film-card')) {
+                const filmCard = e.target.closest('.film-card');
+                document.querySelector('.film-card.selected')?.classList.remove('selected');
+                filmCard.classList.add('selected');
+            }
+        }, true);
+
+        function adjustSeatGrid() {
+            if (window.innerWidth <= 390) {
+                document.querySelectorAll('.seats-grid').forEach(grid => {
+                    grid.style.gridTemplateColumns = 'repeat(6, 1fr)';
+                });
+            } else if (window.innerWidth <= 844) {
+                document.querySelectorAll('.seats-grid').forEach(grid => {
+                    grid.style.gridTemplateColumns = 'repeat(8, 1fr)';
+                });
+            }
+        }
+
+        window.addEventListener('resize', adjustSeatGrid);
+        adjustSeatGrid();
+    </script>
+</body>
+
+</html>
