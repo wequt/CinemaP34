@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMA CITY - Справочная информация</title>
+    <link rel="stylesheet" href="css/info.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">CINEMA CITY</a>
+
+            <div class="burger-menu" id="burgerMenu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#">Афиша</a></li>
+                    <li><a href="#">Расписание</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="info.html" class="active">Справка</a></li>
+                </ul>
+            </nav>
+
+            <div class="auth-buttons">
+                <a href="registr.html" class="btn btn-outline">Войти</a>
+                <a href="registr.html" class="btn">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>СПРАВОЧНАЯ ИНФОРМАЦИЯ</h1>
+                <p>Здесь вы найдете ответы на часто задаваемые вопросы, правила посещения кинотеатра и другую полезную
+                    информацию</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">ПРАВИЛА ПОСЕЩЕНИЯ</h2>
+            <div class="info-container">
+                <h3 class="info-title">Общие правила</h3>
+                <div class="info-content">
+                    <div class="info-item">
+                        <h3>Возрастные ограничения</h3>
+                        <p>Посещение кинотеатра детьми до 12 лет возможно только в сопровождении взрослых. Фильмы имеют
+                            возрастные ограничения согласно законодательству.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Опоздания</h3>
+                        <p>Опоздавшим зрителям может быть отказано в посещении сеанса или предложены другие места в
+                            зале.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Фото и видеосъемка</h3>
+                        <p>Запрещена фото и видеосъемка во время сеанса. Нарушители будут удалены из зала без
+                            компенсации стоимости билета.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Питание в зале</h3>
+                        <p>Разрешается проносить только продукты, приобретенные в кинотеатре. Собственная еда и напитки
+                            запрещены.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <h3 class="info-title">Возврат билетов</h3>
+                <div class="info-content">
+                    <div class="info-item">
+                        <h3>Условия возврата</h3>
+                        <p>Возврат билетов возможен не позднее чем за 1 час до начала сеанса. При возврате удерживается
+                            10% от стоимости билета.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Отмена сеанса</h3>
+                        <p>В случае отмены сеанса кинотеатром, стоимость билетов возвращается полностью или предлагается
+                            другой сеанс на выбор.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Онлайн-покупка</h3>
+                        <p>Билеты, купленные онлайн, можно вернуть через личный кабинет или обратившись в кассу
+                            кинотеатра.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Технические проблемы</h3>
+                        <p>При технических неполадках во время сеанса зрителям предлагается другой сеанс или возврат
+                            средств.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">ОБРАТНАЯ СВЯЗЬ</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Тема</label>
+                        <select id="subject">
+                            <option value="question">Вопрос</option>
+                            <option value="feedback">Отзыв</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О кинотеатре</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="kabinett.html">Личный кабинет</a></li>
+                        <li><a href="admin.html">Администратор</a></li>
+                        <li><a href="kass.html">Кассир</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Правила посещения</a></li>
+                        <li><a href="#">Возврат билетов</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>+7 (321) 123-45-67</li>
+                        <li>info@cinemacity.ru</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const burgerMenu = document.getElementById('burgerMenu');
+        const mainNav = document.getElementById('mainNav');
+
+        burgerMenu.addEventListener('click', function () {
+            this.classList.toggle('active');
+            mainNav.classList.toggle('active');
+
+            if (mainNav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        const navLinks = document.querySelectorAll('#mainNav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                mainNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+
+</html>
